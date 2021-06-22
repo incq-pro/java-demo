@@ -15,6 +15,15 @@ import static org.mockito.Mockito.*;
  * @date 2021-01-26
  */
 public class MockTest {
+
+    @Test
+    public void xx() {
+        Integer x1 = new Integer(1);
+        Integer x2 = new Integer(1);
+        System.out.println("x1 == x2:" + (x1 == x2));
+        System.out.println("x1.equals(x2): " + x1.equals(x2));
+    }
+
    @Test
    public void testMock() {
        List mockedList = mock(List.class);
