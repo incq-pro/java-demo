@@ -1,8 +1,5 @@
 package pro.incq.refact;
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
-
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Random;
@@ -15,7 +12,6 @@ import java.util.Random;
  */
 
 public class IdGenerator {
-    private static final Logger logger = LoggerFactory.getLogger(IdGenerator.class);
 
     public static String generate() {
         String id = "";
@@ -44,7 +40,6 @@ public class IdGenerator {
             id = String.format("%s-%d-%s", hostName,
                     System.currentTimeMillis(), new String(randomChars));
         } catch (UnknownHostException e) {
-            logger.warn("Failed to get the host name.", e);
         }
 
         return id;
